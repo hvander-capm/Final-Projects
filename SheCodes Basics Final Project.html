@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Friends Reunion Information</title>
+    <style>
+      h1 {
+        color: #000000;
+        text-align: center;
+        font-family: Helvetica, Arial, Sans-Serif;
+        padding: 25px;
+        font-size: 44px;
+        line-height: 52px;
+        margin: 0;
+      }
+      h2 {
+        color: #fa1c1c;
+        text-align: center;
+        font-family: Helvetica, Arial, Sans-Serif;
+        margin: 15px;
+        font-size: 34px;
+        line-height: 52px;
+        font-weight: 600;
+      }
+      img {
+        display: block;
+        border-radius: 20px;
+        width: 450px;
+        margin: 0 auto;
+      }
+      a {
+        display: block;
+        text-align: center;
+        font-family: Helvetica, Arial, Sans-Serif;
+        font-size: 25px;
+      }
+      button {
+        display: block;
+        margin: 20px auto;
+        background: #ffe5ee;
+        color: black;
+        border: 3px solid black;
+        border-radius: 25px;
+        font-size: 18px;
+        font-weight: bold;
+        line-height: 22px;
+        padding: 16px 20px;
+        transition: all 200ms ease;
+        cursor: pointer;
+        box-shadow: rgb(37 39 89 / 10%) 0 10px 10px 0;
+      }
+      button:hover {
+        background: black;
+        color: #ffe5ee;
+        border: 3px solid #ffe5ee;
+      }
+      a {
+        display: inline;
+        margin: 0 auto;
+        font-size: 15px;
+        text-decoration: none;
+      }
+      .final-project {
+        box-shadow: rgb(37 39 89 / 8%) 0px 8px 8px 0;
+        background-image: linear-gradient(
+          68.6deg,
+          rgb(252, 165, 241) 1.8%,
+          rgb(181, 255, 255) 100.5%
+        );
+        border-radius: 10px;
+        color: black;
+        width: 70%;
+        padding: 30px;
+        margin: 30px auto;
+      }
+      .learnMore {
+        font-size: 15px;
+        font-weight: bold;
+        color: #fa1c1c;
+        text-decoration: none;
+        opacity: 0.7;
+        font-family: Helvetica, Arial, Sans-Serif;
+        padding: 20px;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 50px;
+        margin-inline-end: 50px;
+      }
+      .info {
+        display: block;
+        font-size: 20px;
+        opacity: 0.7;
+        font-family: Helvetica, Arial, Sans-Serif;
+        padding: 20px;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 50px;
+        margin-inline-end: 50px;
+      }
+      .footer {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+        font-size: 15px;
+        opacity: 0.7;
+        font-family: Helvetica, Arial, Sans-Serif;
+        padding: 20px;
+        margin-block-start: 1em;
+        margin-block-end: 1em;
+        margin-inline-start: 50px;
+        margin-inline-end: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="final-project">
+      <h1>Find out which Friends character you are!</h1>
+      <br />
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/007/614/original/FriendsLead.jpg?1619032908"
+        alt="Friends Headline"
+      />
+      <hr />
+      <h2>Friends Reunion is Officially Happening!</h2>
+      <p class="info">
+        Jennifer Aniston, Courteney Cox, Lisa Kudrow, Matthew Perry, David
+        Schwimmer, and Matt LeBlanc are all returning to film the special on the
+        show’s original set at Warner Bros. Studio’s Stage 24 in Burbank,
+        California.
+        <br />
+        <br />
+        Now, 17 years after the last episode aired, the cast of Friends is
+        returning for a reunion special to reminisce about their time on the hit
+        '90s sitcom.
+        <br />
+        <br />
+        <strong>HBO Max</strong> has yet to announce an official premiere date
+        for the Friends reunion special.
+      </p>
+      <a
+        class="learnMore"
+        href="https://www.goodhousekeeping.com/life/entertainment/a35154336/friends-reunion-special-hbo-max-news-cast-spoilers/ "
+      >
+        👉<em>Learn more exciting details here!</em>
+      </a>
+      <button>Which are you?</button>
+      <p class="footer">
+        This page was built by
+        <a href="http://www.heathervanderberg.com" target="_blank">
+          <span>Heather Vanderberg</span>
+        </a>
+      </p>
+      <script>
+        function friendsCharacter() {
+          let age = prompt("How old are you?");
+          if (age < 21) {
+            let h1 = document.querySelector("h1");
+            h1.innerHTML = "😏 You are Ross!";
+          }
+          if (age > 20 && age <= 31) {
+            let h1 = document.querySelector("h1");
+            h1.innerHTML = "😄 You are Phoebe!";
+          }
+          if (age > 30 && age <= 41) {
+            let h1 = document.querySelector("h1");
+            h1.innerHTML = "🤩 You are Rachel!";
+          }
+          if (age > 40 && age <= 51) {
+            let h1 = document.querySelector("h1");
+            h1.innerHTML = "😎 You are Monica!";
+          }
+          if (age > 50 && age <= 61) {
+            let h1 = document.querySelector("h1");
+            h1.innerHTML = "😎 You are Joey!";
+          }
+          if (age > 60 && age <= 110) {
+            let h1 = document.querySelector("h1");
+            h1.innerHTML = "😎 You are Chandler!";
+          } else {
+            alert("🤯 You must love Friends!");
+          }
+        }
+        let button = document.querySelector("button");
+        button.addEventListener("click", friendsCharacter);
+      </script>
+    </div>
+  </body>
+</html>
